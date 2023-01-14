@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43F4C7382972CA880002FEEF /* NateAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateAppApp.swift */; };
+		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* ContentView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
 		43F4C73F2972CA8A0002FEEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43F4C7372972CA880002FEEF /* NateAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateAppApp.swift; sourceTree = "<group>"; };
+		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
 		43F4C7392972CA880002FEEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43F4C73B2972CA8A0002FEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		43F4C7362972CA880002FEEF /* NateApp */ = {
 			isa = PBXGroup;
 			children = (
-				43F4C7372972CA880002FEEF /* NateAppApp.swift */,
+				43F4C7372972CA880002FEEF /* NateApp.swift */,
 				43F4C7392972CA880002FEEF /* ContentView.swift */,
 				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F4C73A2972CA880002FEEF /* ContentView.swift in Sources */,
-				43F4C7382972CA880002FEEF /* NateAppApp.swift in Sources */,
+				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
