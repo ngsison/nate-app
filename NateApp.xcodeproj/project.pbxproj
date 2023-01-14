@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
+		43B36B0F2972F22F002C17DA /* UIFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B0E2972F22F002C17DA /* UIFeatures.swift */; };
+		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
+		43B36B152972F6B4002C17DA /* NetworkingFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
-		43F4C73A2972CA880002FEEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* ContentView.swift */; };
+		43F4C73A2972CA880002FEEF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* MainView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
 		43F4C73F2972CA8A0002FEEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		43B36B0E2972F22F002C17DA /* UIFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFeatures.swift; sourceTree = "<group>"; };
+		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
+		43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFeatures.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
-		43F4C7392972CA880002FEEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43F4C7392972CA880002FEEF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		43F4C73B2972CA8A0002FEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +40,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43B36B0A2972F032002C17DA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B0B2972F20A002C17DA /* Models */,
+				43B36B0D2972F215002C17DA /* ViewModels */,
+				43B36B0C2972F211002C17DA /* Views */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		43B36B0B2972F20A002C17DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B112972F668002C17DA /* FeatureCategories.swift */,
+				43B36B0E2972F22F002C17DA /* UIFeatures.swift */,
+				43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43B36B0C2972F211002C17DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43F4C7392972CA880002FEEF /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43B36B0D2972F215002C17DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B082972F02D002C17DA /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		43F4C72B2972CA880002FEEF = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
-				43F4C7392972CA880002FEEF /* ContentView.swift */,
+				43B36B0A2972F032002C17DA /* MainView */,
 				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
 			);
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F4C73A2972CA880002FEEF /* ContentView.swift in Sources */,
+				43B36B0F2972F22F002C17DA /* UIFeatures.swift in Sources */,
+				43F4C73A2972CA880002FEEF /* MainView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
+				43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */,
+				43B36B152972F6B4002C17DA /* NetworkingFeatures.swift in Sources */,
+				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
