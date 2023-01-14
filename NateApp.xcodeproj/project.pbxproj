@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
-		43B36B0F2972F22F002C17DA /* UIFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B0E2972F22F002C17DA /* UIFeatures.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
-		43B36B152972F6B4002C17DA /* NetworkingFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* MainView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
@@ -19,9 +17,7 @@
 
 /* Begin PBXFileReference section */
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		43B36B0E2972F22F002C17DA /* UIFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFeatures.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
-		43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingFeatures.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
 		43F4C7392972CA880002FEEF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -54,8 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				43B36B112972F668002C17DA /* FeatureCategories.swift */,
-				43B36B0E2972F22F002C17DA /* UIFeatures.swift */,
-				43B36B142972F6B4002C17DA /* NetworkingFeatures.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,11 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43B36B0F2972F22F002C17DA /* UIFeatures.swift in Sources */,
 				43F4C73A2972CA880002FEEF /* MainView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
 				43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */,
-				43B36B152972F6B4002C17DA /* NetworkingFeatures.swift in Sources */,
 				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

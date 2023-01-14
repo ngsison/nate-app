@@ -7,34 +7,19 @@
 
 import Foundation
 
-protocol Feature {
-    var title: String { get }
+struct Feature: Hashable {
+    var title: String
 }
 
-protocol FeatureCategory {
-    var title: String { get }
-    var features: [Feature] { get }
-}
-
-enum FeatureCategories: FeatureCategory, CaseIterable {
-    case ui
-    case networking
+struct FeatureCategory: Hashable {
+    var title: String
+    var features: [Feature]
     
-    var title: String {
-        switch self {
-        case .ui:
-            return "UI Features"
-        case .networking:
-            return "Networking Features"
-        }
-    }
-    
-    var features: [Feature] {
-        switch self {
-        case .ui:
-            return UIFeatures.allCases
-        case .networking:
-            return NetworkingFeatures.allCases
-        }
-    }
+    static var allFeatureCategories = [FeatureCategory(title: "UI Features",            features: [Feature(title: "Chart"),
+                                                                                                   Feature(title: "Gradients"),
+                                                                                                   Feature(title: "External Links"),
+                                                                                                   Feature(title: "UIKit PhotoPicker")]),
+                                       
+                                       FeatureCategory(title: "Networking Features",    features: [Feature(title: "GitHub Sample API"),
+                                                                                                   Feature(title: "File Download")])]
 }

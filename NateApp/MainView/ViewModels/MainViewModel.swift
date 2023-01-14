@@ -5,8 +5,9 @@
 //  Created by Nathaniel Brion Sison on 1/14/23.
 //
 
-import Foundation
+import SwiftUI
 
 class MainViewModel: ObservableObject {
-    @Published var featureCategories = FeatureCategories.allCases
+    @Published var featureCategories = FeatureCategory.allFeatureCategories
+    @Published var navigationPath = NavigationPath()
 }
