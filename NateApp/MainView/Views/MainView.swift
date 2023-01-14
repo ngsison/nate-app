@@ -14,10 +14,11 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack {
-                FeatureList(viewModel: viewModel)
+                FeatureListView(viewModel: viewModel)
                     .navigationDestination(for: Feature.self) { feature in
-                        Text(feature.title)
+                        FeatureDetailView(feature: feature)
                     }
+                
                 Text("App Version: 1")
             }
         }
@@ -30,21 +31,48 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct FeatureList: View {
+struct FeatureCell: View {
+    let feature: Feature
     @StateObject var viewModel: MainViewModel
     
+    var body: some View {
+        Button {
+            viewModel.navigationPath.append(feature)
+        } label: {
+            Text(feature.title)
+        }
+        .foregroundColor(.primary)
+    }
+}
+
+struct FeatureListView: View {
+    @StateObject var viewModel: MainViewModel
     var body: some View {
         List {
             ForEach(viewModel.featureCategories, id: \.title) { featureCategory in
                 Section(featureCategory.title) {
                     ForEach(featureCategory.features, id: \.title) { feature in
-                        NavigationLink(value: feature) {
-                            Text(feature.title)
-                        }
+                        FeatureCell(feature: feature, viewModel: viewModel)
                     }
                 }
             }
         }
         .navigationTitle("Features")
+    }
+}
+
+struct FeatureDetailView: View {
+    let feature: Feature
+    var body: some View {
+        ZStack {
+            switch feature.title {
+            case "Gradients":
+                GradientView()
+            default:
+                Text(feature.title)
+            }
+        }
+        .navigationTitle(feature.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

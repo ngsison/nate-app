@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
+		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* MainView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
+		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
 		43F4C7392972CA880002FEEF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,22 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		43B36B16297308DF002C17DA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B17297308E7002C17DA /* Gradients */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		43B36B17297308E7002C17DA /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B1829730907002C17DA /* GradientView.swift */,
+			);
+			path = Gradients;
+			sourceTree = "<group>";
+		};
 		43F4C72B2972CA880002FEEF = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +109,7 @@
 			children = (
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
 				43B36B0A2972F032002C17DA /* MainView */,
+				43B36B16297308DF002C17DA /* Features */,
 				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
 			);
@@ -177,6 +196,7 @@
 			files = (
 				43F4C73A2972CA880002FEEF /* MainView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
+				43B36B1929730907002C17DA /* GradientView.swift in Sources */,
 				43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */,
 				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
 			);
