@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
-    
-    @StateObject private var viewModel = MainViewModel()
+    @ObservedObject var viewModel = MainViewModel()
     
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack {
                 FeatureListView(viewModel: viewModel)
-                    .navigationDestination(for: Feature.self) { feature in
-                        FeatureDetailView(feature: feature)
-                    }
-                
                 Text("App Version: 1")
             }
         }
@@ -31,48 +26,51 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct FeatureCell: View {
-    let feature: Feature
-    @StateObject var viewModel: MainViewModel
+fileprivate struct FeatureListView: View {
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
-        Button {
-            viewModel.navigationPath.append(feature)
-        } label: {
-            Text(feature.title)
-        }
-        .foregroundColor(.primary)
-    }
-}
-
-struct FeatureListView: View {
-    @StateObject var viewModel: MainViewModel
-    var body: some View {
         List {
-            ForEach(viewModel.featureCategories, id: \.title) { featureCategory in
+            ForEach(viewModel.featureCategories, id: \.self) { featureCategory in
                 Section(featureCategory.title) {
                     ForEach(featureCategory.features, id: \.title) { feature in
-                        FeatureCell(feature: feature, viewModel: viewModel)
+                        FeatureCell(viewModel: viewModel, feature: feature)
                     }
                 }
             }
         }
         .navigationTitle("Features")
+        .navigationDestination(for: Feature.self) { feature in
+            FeatureDetailView(feature: feature)
+        }
     }
 }
 
-struct FeatureDetailView: View {
-    let feature: Feature
+fileprivate struct FeatureCell: View {
+    @ObservedObject var viewModel: MainViewModel
+    var feature: Feature
+
+    var body: some View {
+        Button {
+            viewModel.navigationPath.append(feature)
+        } label: {
+            Text(feature.title.rawValue).foregroundColor(.primary)
+        }
+    }
+}
+
+fileprivate struct FeatureDetailView: View {
+    var feature: Feature
     var body: some View {
         ZStack {
             switch feature.title {
-            case "Gradients":
+            case .gradients:
                 GradientView()
             default:
-                Text(feature.title)
+                Text(feature.title.rawValue)
             }
         }
-        .navigationTitle(feature.title)
+        .navigationTitle(feature.title.rawValue)
         .navigationBarTitleDisplayMode(.inline)
     }
 }

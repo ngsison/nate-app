@@ -14,7 +14,7 @@ struct UnitPointChoice: Identifiable, Hashable {
 }
 
 struct GradientView: View {
-    @StateObject private var viewModel = GradientViewModel()
+    @ObservedObject private var viewModel = GradientViewModel()
     
     var body: some View {
         ZStack {
@@ -26,20 +26,8 @@ struct GradientView: View {
             Form {
                 ColorPicker("Select Start Color", selection: $viewModel.startColor)
                 ColorPicker("Select End Color", selection: $viewModel.endColor)
-                
-                Picker("Start Point", selection: $viewModel.startPoint) {
-                    ForEach(viewModel.startPointsChoices) { choice in
-                        Text(choice.title).tag(choice)
-                    }
-                }
-                .pickerStyle(.menu)
-                
-                Picker("End Point", selection: $viewModel.endPoint) {
-                    ForEach(viewModel.endPointsChoices) { choice in
-                        Text(choice.title).tag(choice)
-                    }
-                }
-                .pickerStyle(.menu)
+                UnitPointPicker(title: "Start Point", choices: viewModel.startPointsChoices, selection: $viewModel.startPoint)
+                UnitPointPicker(title: "End Point", choices: viewModel.endPointsChoices, selection: $viewModel.endPoint)
             }
             .scrollContentBackground(.hidden)
         }
@@ -49,5 +37,20 @@ struct GradientView: View {
 struct GradientView_Previews: PreviewProvider {
     static var previews: some View {
         GradientView()
+    }
+}
+
+fileprivate struct UnitPointPicker: View {
+    var title: String
+    var choices: [UnitPointChoice]
+    @Binding var selection: UnitPointChoice
+    
+    var body: some View {
+        Picker("Start Point", selection: $selection) {
+            ForEach(choices) { choice in
+                Text(choice.title).tag(choice)
+            }
+        }
+        .pickerStyle(.menu)
     }
 }
