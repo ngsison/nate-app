@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum FeatureCategoryTitle: String, CaseIterable {
+    case ui = "UI Features"
+    case networking = "Networking Features"
+}
+
 enum FeatureTitle: String {
     case charts = "Charts"
     case gradients = "Gradients"
@@ -21,14 +26,24 @@ struct Feature: Hashable {
 }
 
 struct FeatureCategory: Hashable {
-    var title: String
+    var title: FeatureCategoryTitle
     var features: [Feature]
     
-    static var allFeatureCategories = [FeatureCategory(title: "UI Features",            features: [Feature(title: .charts),
-                                                                                                   Feature(title: .gradients),
-                                                                                                   Feature(title: .externalLinks),
-                                                                                                   Feature(title: .photoPicker)]),
-                                       
-                                       FeatureCategory(title: "Networking Features",    features: [Feature(title: .githubApi),
-                                                                                                   Feature(title: .fileDownload)])]
+    static var allFeatureCategories = FeatureCategoryTitle.allCases
+        .map { featureCategoryTitle in
+            var features: [Feature]
+            
+            switch featureCategoryTitle {
+            case .ui:
+                features = [Feature(title: .charts),
+                            Feature(title: .gradients),
+                            Feature(title: .externalLinks),
+                            Feature(title: .photoPicker)]
+            case .networking:
+                features = [Feature(title: .githubApi),
+                            Feature(title: .fileDownload)]
+            }
+            
+            return FeatureCategory(title: featureCategoryTitle, features: features)
+        }
 }

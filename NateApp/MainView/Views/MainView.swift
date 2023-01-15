@@ -32,7 +32,7 @@ fileprivate struct FeatureListView: View {
     var body: some View {
         List {
             ForEach(viewModel.featureCategories, id: \.self) { featureCategory in
-                Section(featureCategory.title) {
+                Section(featureCategory.title.rawValue) {
                     ForEach(featureCategory.features, id: \.title) { feature in
                         FeatureCell(viewModel: viewModel, feature: feature)
                     }
