@@ -16,6 +16,8 @@ struct FeatureDetailView: View {
                 ChartView()
             case .gradients:
                 GradientView()
+            case .photoPicker:
+                PhotoPickerView()
             default:
                 Text(feature.title.rawValue)
             }

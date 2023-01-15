@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247AF2974410E0055E4F1 /* PhotoPickerView.swift */; };
+		430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B1297441270055E4F1 /* PhotoPicker.swift */; };
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430247AF2974410E0055E4F1 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		430247B1297441270055E4F1 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -52,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430247AE297440F70055E4F1 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				430247AF2974410E0055E4F1 /* PhotoPickerView.swift */,
+				430247B1297441270055E4F1 /* PhotoPicker.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
 		43B36B0A2972F032002C17DA /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 			children = (
 				43B36B1E2973C7E9002C17DA /* Charts */,
 				43B36B17297308E7002C17DA /* Gradients */,
+				430247AE297440F70055E4F1 /* PhotoPicker */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -287,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */,
 				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,
 				43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */,
@@ -298,6 +313,7 @@
 				43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */,
 				43B36B262973C92E002C17DA /* FeatureDetailView.swift in Sources */,
 				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
+				430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */,
 				43B36B232973C879002C17DA /* MonthViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
