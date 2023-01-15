@@ -19,6 +19,7 @@ enum FeatureTitle: String {
     case photoPicker = "PhotoPicker"
     case githubApi = "GitHub Sample API"
     case fileDownload = "File Download"
+    case maps = "Maps"
 }
 
 struct Feature: Hashable {
@@ -38,7 +39,8 @@ struct FeatureCategory: Hashable {
                 features = [Feature(title: .charts),
                             Feature(title: .gradients),
                             Feature(title: .externalLinks),
-                            Feature(title: .photoPicker)]
+                            Feature(title: .photoPicker),
+                            Feature(title: .maps)]
             case .networking:
                 features = [Feature(title: .githubApi),
                             Feature(title: .fileDownload)]
