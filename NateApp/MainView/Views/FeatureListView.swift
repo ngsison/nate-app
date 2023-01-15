@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  FeatureListView.swift
 //  NateApp
 //
 //  Created by Nathaniel Brion Sison on 1/14/23.
@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct FeatureListView: View {
     @ObservedObject var viewModel = MainViewModel()
     
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack {
-                FeatureListView(viewModel: viewModel)
+                FeatureList(viewModel: viewModel)
                 Text("App Version: 1")
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FeatureListPreview: PreviewProvider {
     static var previews: some View {
-        MainView()
+        FeatureListView()
     }
 }
 
-fileprivate struct FeatureListView: View {
+fileprivate struct FeatureList: View {
     @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
@@ -56,21 +56,5 @@ fileprivate struct FeatureCell: View {
         } label: {
             Text(feature.title.rawValue).foregroundColor(.primary)
         }
-    }
-}
-
-fileprivate struct FeatureDetailView: View {
-    var feature: Feature
-    var body: some View {
-        ZStack {
-            switch feature.title {
-            case .gradients:
-                GradientView()
-            default:
-                Text(feature.title.rawValue)
-            }
-        }
-        .navigationTitle(feature.title.rawValue)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }

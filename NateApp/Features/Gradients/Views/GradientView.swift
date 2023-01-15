@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct UnitPointChoice: Identifiable, Hashable {
-    var id = UUID()
-    var title: String
-    var unitPoint: UnitPoint
-}
-
 struct GradientView: View {
     @ObservedObject private var viewModel = GradientViewModel()
     
@@ -34,7 +28,7 @@ struct GradientView: View {
     }
 }
 
-struct GradientView_Previews: PreviewProvider {
+struct GradientPreview: PreviewProvider {
     static var previews: some View {
         GradientView()
     }
