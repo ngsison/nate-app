@@ -10,6 +10,7 @@
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
+		43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1C2973B30A002C17DA /* GradientViewModel.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* MainView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		43B36B1C2973B30A002C17DA /* GradientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewModel.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
 		43F4C7392972CA880002FEEF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -83,9 +85,26 @@
 		43B36B17297308E7002C17DA /* Gradients */ = {
 			isa = PBXGroup;
 			children = (
-				43B36B1829730907002C17DA /* GradientView.swift */,
+				43B36B1A2973B2ED002C17DA /* ViewModels */,
+				43B36B1B2973B2F7002C17DA /* Views */,
 			);
 			path = Gradients;
+			sourceTree = "<group>";
+		};
+		43B36B1A2973B2ED002C17DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B1C2973B30A002C17DA /* GradientViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		43B36B1B2973B2F7002C17DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B1829730907002C17DA /* GradientView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		43F4C72B2972CA880002FEEF = {
@@ -194,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43F4C73A2972CA880002FEEF /* MainView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
 				43B36B1929730907002C17DA /* GradientView.swift in Sources */,
