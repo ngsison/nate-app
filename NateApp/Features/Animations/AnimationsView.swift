@@ -13,21 +13,47 @@ struct AnimationsView: View {
     @State private var startDegreeAngle: Double = 0
     @State private var endDegreeAngle: Double = 0
     
+    private var itemSize: Double = 80
+    
     var body: some View {
-        VStack(spacing: 100) {
-            HeartView(size: 100, color: .pink)
-                .rotationEffect(Angle(degrees: animating ? startDegreeAngle : endDegreeAngle))
-            
-            VStack {
-                Button("Animate") {
-                    withAnimation(.easeInOut) {
-                        startDegreeAngle = -45
-                        endDegreeAngle = 45
-                    }
+        VStack(spacing: 40) {
+            ScrollView(.horizontal) {
+                HStack(spacing: itemSize) {
+                    HeartView(size: itemSize, color: .pink)
+                        .rotationEffect(Angle(degrees: animating ? startDegreeAngle : endDegreeAngle))
                     
-                    withAnimation(.easeInOut.repeatForever()) {
-                        animating.toggle()
+                    Divider()
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.mint)
+                            .frame(width: animating ? itemSize * 2 : itemSize,
+                                   height: animating ? itemSize * 2 : itemSize)
                     }
+                    .frame(width: itemSize * 2, height: itemSize * 2)
+                    
+                    Divider()
+                    
+                    Circle()
+                        .foregroundColor(.orange)
+                        .frame(width: itemSize, height: itemSize)
+                        .offset(x: 0,
+                                y: animating ? -60 : 60)
+                }
+                .frame(height: 200)
+                .padding(.horizontal, itemSize)
+            }
+            .scrollIndicators(.hidden)
+            .background(.black.opacity(0.1))
+            
+            Button("Animate") {
+                withAnimation(.easeInOut) {
+                    startDegreeAngle = -45
+                    endDegreeAngle = 45
+                }
+                
+                withAnimation(.easeInOut.repeatForever()) {
+                    animating.toggle()
                 }
             }
         }
