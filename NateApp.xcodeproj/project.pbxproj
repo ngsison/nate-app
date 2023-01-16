@@ -65,6 +65,13 @@
 			path = PhotoPicker;
 			sourceTree = "<group>";
 		};
+		430247B329750BDC0055E4F1 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		43B36B0A2972F032002C17DA /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +110,7 @@
 		43B36B16297308DF002C17DA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				430247B329750BDC0055E4F1 /* Animations */,
 				43B36B1E2973C7E9002C17DA /* Charts */,
 				43B36B17297308E7002C17DA /* Gradients */,
 				430247AE297440F70055E4F1 /* PhotoPicker */,

@@ -12,18 +12,35 @@ enum FeatureCategoryTitle: String, CaseIterable {
     case networking = "Networking Features"
 }
 
-enum FeatureTitle: String {
+enum FeatureTitle: String, CaseIterable {
+    
     // MARK: - UI Features
+    case animations = "Animations"
     case charts = "Charts"
     case gradients = "Gradients"
     case externalLinks = "External Links"
-    case photoPicker = "PhotoPicker"
     case maps = "Maps"
-    case animations = "Animations"
+    case photoPicker = "PhotoPicker"
     
     // MARK: - Networking Features
-    case githubApi = "GitHub Sample API"
     case fileDownload = "File Download"
+    case githubApi = "GitHub Sample API"
+    
+    var category: FeatureCategoryTitle {
+        switch self {
+        case .animations,
+                .charts,
+                .gradients,
+                .externalLinks,
+                .maps,
+                .photoPicker:
+            return .ui
+            
+        case .fileDownload,
+                .githubApi:
+            return .networking
+        }
+    }
 }
 
 struct Feature: Hashable {
@@ -34,23 +51,12 @@ struct FeatureCategory: Hashable {
     var title: FeatureCategoryTitle
     var features: [Feature]
     
-    static var allFeatureCategories = FeatureCategoryTitle.allCases
-        .map { featureCategoryTitle in
-            var features: [Feature]
-            
-            switch featureCategoryTitle {
-            case .ui:
-                features = [Feature(title: .charts),
-                            Feature(title: .gradients),
-                            Feature(title: .externalLinks),
-                            Feature(title: .photoPicker),
-                            Feature(title: .maps),
-                            Feature(title: .animations)]
-            case .networking:
-                features = [Feature(title: .githubApi),
-                            Feature(title: .fileDownload)]
-            }
-            
-            return FeatureCategory(title: featureCategoryTitle, features: features)
-        }
+    static var allFeatureCategories = FeatureCategoryTitle.allCases.map { featureCategoryTitle in
+        
+        let features = FeatureTitle.allCases
+            .filter { $0.category == featureCategoryTitle }
+            .map { Feature(title: $0) }
+        
+        return FeatureCategory(title: featureCategoryTitle, features: features)
+    }
 }
