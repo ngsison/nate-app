@@ -13,13 +13,17 @@ enum FeatureCategoryTitle: String, CaseIterable {
 }
 
 enum FeatureTitle: String {
+    // MARK: - UI Features
     case charts = "Charts"
     case gradients = "Gradients"
     case externalLinks = "External Links"
     case photoPicker = "PhotoPicker"
+    case maps = "Maps"
+    case animations = "Animations"
+    
+    // MARK: - Networking Features
     case githubApi = "GitHub Sample API"
     case fileDownload = "File Download"
-    case maps = "Maps"
 }
 
 struct Feature: Hashable {
@@ -40,7 +44,8 @@ struct FeatureCategory: Hashable {
                             Feature(title: .gradients),
                             Feature(title: .externalLinks),
                             Feature(title: .photoPicker),
-                            Feature(title: .maps)]
+                            Feature(title: .maps),
+                            Feature(title: .animations)]
             case .networking:
                 features = [Feature(title: .githubApi),
                             Feature(title: .fileDownload)]
