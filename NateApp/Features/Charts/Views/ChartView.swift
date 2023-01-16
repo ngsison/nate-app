@@ -13,7 +13,7 @@ struct ChartView: View {
     
     var body: some View {
         List {
-            VStack(alignment: .leading, spacing: 29) {
+            VStack(alignment: .leading, spacing: 40) {
                 ChartsHeader(totalViews: viewModel.totalViews)
                 BarChart(monthViews: viewModel.monthViews)
                 LineChart(monthViews: viewModel.monthViews)

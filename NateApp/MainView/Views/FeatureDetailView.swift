@@ -12,6 +12,8 @@ struct FeatureDetailView: View {
     var body: some View {
         ZStack {
             switch feature.title {
+            case .animations:
+                AnimationsView()
             case .charts:
                 ChartView()
             case .gradients:
@@ -29,6 +31,6 @@ struct FeatureDetailView: View {
 
 struct FeatureDetailPreview: PreviewProvider {
     static var previews: some View {
-        FeatureDetailView(feature: Feature(title: .charts))
+        FeatureDetailView(feature: Feature(title: .animations))
     }
 }
