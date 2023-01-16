@@ -15,6 +15,7 @@ struct FeatureListView: View {
             VStack {
                 FeatureList(viewModel: viewModel)
                 Text("v\(Common.appVersion):\(Common.buildNumber)")
+                    .padding(.bottom)
             }
         }
     }
