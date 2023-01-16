@@ -22,8 +22,6 @@ struct AnimationsView: View {
                     HeartView(size: itemSize, color: .pink)
                         .rotationEffect(Angle(degrees: animating ? startDegreeAngle : endDegreeAngle))
                     
-                    Divider()
-                    
                     ZStack {
                         Rectangle()
                             .foregroundColor(.mint)
@@ -31,8 +29,6 @@ struct AnimationsView: View {
                                    height: animating ? itemSize * 2 : itemSize)
                     }
                     .frame(width: itemSize * 2, height: itemSize * 2)
-                    
-                    Divider()
                     
                     Circle()
                         .foregroundColor(.orange)
