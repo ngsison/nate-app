@@ -14,7 +14,7 @@ struct FeatureListView: View {
         NavigationStack(path: $viewModel.navigationPath) {
             VStack {
                 FeatureList(viewModel: viewModel)
-                Text("App Version: 1")
+                Text("v\(Common.appVersion):\(Common.buildNumber)")
             }
         }
     }
