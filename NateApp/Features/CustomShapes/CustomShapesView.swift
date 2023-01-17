@@ -9,20 +9,21 @@ import SwiftUI
 
 struct CustomShapesView: View {
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack {
-                Triangle()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.orange)
-                
-                MapBalloon()
-                    .frame(width: 150, height: 100)
-                    .foregroundColor(.mint)
-            }
-            .frame(height: 200)
-            .padding(.horizontal)
+        HStack {
+            Heart()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.blue)
+            
+            Triangle()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.orange)
+            
+            MapBalloon()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.mint)
         }
-        .scrollIndicators(.hidden)
+        .frame(height: 200)
+        .padding(.horizontal)
     }
 }
 
@@ -34,25 +35,50 @@ struct CustomShapesPreview: PreviewProvider {
 
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
+        let bottomLeft = CGPoint(x: rect.minX, y: rect.maxY)
+        let bottomRight = CGPoint(x: rect.maxX, y: rect.maxY)
+        let topCenter = CGPoint(x: rect.midX, y: rect.minY)
+        
         var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.move(to: bottomLeft)
+        path.addLine(to: bottomRight)
+        path.addLine(to: topCenter)
         return path
     }
 }
 
 struct MapBalloon: Shape {
     func path(in rect: CGRect) -> Path {
+        let topCenter = CGPoint(x: rect.midX, y: rect.minY)
+        let bottomCenter = CGPoint(x: rect.midX, y: rect.maxY)
+        let topLeft = CGPoint(x: rect.minX, y: rect.minY)
+        let topRight = CGPoint(x: rect.maxX, y: rect.minY)
+        let midLeft = CGPoint(x: rect.minX, y: rect.midY)
+        let midRight = CGPoint(x: rect.maxX, y: rect.midY)
+        
         var path = Path()
-        path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
-        path.addQuadCurve(to: CGPoint(x: rect.midX, y: rect.minY),
-                          control: CGPoint(x: rect.minX, y: rect.minY))
+        path.move(to: bottomCenter)
+        path.addCurve(to: topCenter, control1: midLeft, control2: topLeft)
+        path.move(to: bottomCenter)
+        path.addCurve(to: topCenter, control1: midRight, control2: topRight)
+        return path
+    }
+}
+
+struct Heart: Shape {
+    func path(in rect: CGRect) -> Path {
+        let topCenter = CGPoint(x: rect.midX, y: rect.height * 0.4)
+        let bottomCenter = CGPoint(x: rect.midX, y: rect.height * 0.8)
+        let topLeft = CGPoint(x: rect.width * 0.3, y: rect.minY)
+        let topRight = CGPoint(x: rect.width * 0.7, y: rect.minY)
+        let midLeft = CGPoint(x: rect.minX, y: rect.midY)
+        let midRight = CGPoint(x: rect.maxX, y: rect.midY)
         
-        path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
-        path.addQuadCurve(to: CGPoint(x: rect.midX, y: rect.minY),
-                          control: CGPoint(x: rect.maxX, y: rect.minY))
-        
+        var path = Path()
+        path.move(to: bottomCenter)
+        path.addCurve(to: topCenter, control1: midLeft, control2: topLeft)
+        path.move(to: bottomCenter)
+        path.addCurve(to: topCenter, control1: midRight, control2: topRight)
         return path
     }
 }
