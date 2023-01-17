@@ -20,8 +20,8 @@ struct GradientView: View {
             Form {
                 ColorPicker("Select Start Color", selection: $viewModel.startColor)
                 ColorPicker("Select End Color", selection: $viewModel.endColor)
-                UnitPointPicker(title: "Start Point", choices: viewModel.startPointsChoices, selection: $viewModel.startPoint)
-                UnitPointPicker(title: "End Point", choices: viewModel.endPointsChoices, selection: $viewModel.endPoint)
+                UnitPointPicker(title: "Select Start Point", choices: viewModel.startPointsChoices, selection: $viewModel.startPoint)
+                UnitPointPicker(title: "Select End Point", choices: viewModel.endPointsChoices, selection: $viewModel.endPoint)
             }
             .scrollContentBackground(.hidden)
         }
@@ -40,7 +40,7 @@ fileprivate struct UnitPointPicker: View {
     @Binding var selection: UnitPointChoice
     
     var body: some View {
-        Picker("Start Point", selection: $selection) {
+        Picker(title, selection: $selection) {
             ForEach(choices) { choice in
                 Text(choice.title).tag(choice)
             }
