@@ -14,15 +14,11 @@ class GradientViewModel: ObservableObject {
     @Published var endColor = Color.black
     @Published var endPoint = UnitPointChoice(title: "Bottom", unitPoint: .bottom)
     
-    var startPointsChoices: [UnitPointChoice] {
-        [UnitPointChoice(title: "Top", unitPoint: .top),
-         UnitPointChoice(title: "Top Left", unitPoint: .topLeading),
-         UnitPointChoice(title: "Top Right", unitPoint: .topTrailing)]
-    }
+    @Published var startPointsChoices = [UnitPointChoice(title: "Top", unitPoint: .top),
+                                          UnitPointChoice(title: "Top Left", unitPoint: .topLeading),
+                                          UnitPointChoice(title: "Top Right", unitPoint: .topTrailing)]
     
-    var endPointsChoices: [UnitPointChoice] {
-        [UnitPointChoice(title: "Bottom", unitPoint: .bottom),
-         UnitPointChoice(title: "Bottom Left", unitPoint: .bottomLeading),
-         UnitPointChoice(title: "Bottom Right", unitPoint: .bottomTrailing)]
-    }
+    @Published var endPointsChoices = [UnitPointChoice(title: "Bottom", unitPoint: .bottom),
+                                       UnitPointChoice(title: "Bottom Left", unitPoint: .bottomLeading),
+                                       UnitPointChoice(title: "Bottom Right", unitPoint: .bottomTrailing)]
 }
