@@ -11,6 +11,7 @@
 		430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B1297441270055E4F1 /* PhotoPicker.swift */; };
 		430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B529750E8D0055E4F1 /* AnimationsView.swift */; };
 		430247B8297534F70055E4F1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B7297534F70055E4F1 /* Common.swift */; };
+		4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308F8792976298300E53DFB /* CustomShapesView.swift */; };
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
@@ -32,6 +33,7 @@
 		430247B1297441270055E4F1 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		430247B529750E8D0055E4F1 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		430247B7297534F70055E4F1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4308F8792976298300E53DFB /* CustomShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesView.swift; sourceTree = "<group>"; };
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,21 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		4308F87529759A3A00E53DFB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4308F8782976296D00E53DFB /* CustomShapes */ = {
+			isa = PBXGroup;
+			children = (
+				4308F8792976298300E53DFB /* CustomShapesView.swift */,
+			);
+			path = CustomShapes;
+			sourceTree = "<group>";
+		};
 		43B36B0A2972F032002C17DA /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +134,7 @@
 			children = (
 				430247B329750BDC0055E4F1 /* Animations */,
 				43B36B1E2973C7E9002C17DA /* Charts */,
+				4308F8782976296D00E53DFB /* CustomShapes */,
 				43B36B17297308E7002C17DA /* Gradients */,
 				430247AE297440F70055E4F1 /* PhotoPicker */,
 			);
@@ -230,6 +248,7 @@
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
 				43B36B0A2972F032002C17DA /* MainView */,
 				43B36B16297308DF002C17DA /* Features */,
+				4308F87529759A3A00E53DFB /* CustomViews */,
 				43B36B2F2973CB78002C17DA /* Utilities */,
 				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
@@ -322,6 +341,7 @@
 				43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */,
 				43B36B2E2973CA99002C17DA /* ChartViewModel.swift in Sources */,
 				43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */,
+				4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
 				43B36B202973C80F002C17DA /* ChartView.swift in Sources */,
 				43B36B1929730907002C17DA /* GradientView.swift in Sources */,

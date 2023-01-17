@@ -17,6 +17,7 @@ enum FeatureTitle: String, CaseIterable {
     // MARK: - UI Features
     case animations = "Animations"
     case charts = "Charts"
+    case customShapes = "Custom Shapes"
     case gradients = "Gradients"
     case externalLinks = "External Links"
     case maps = "Maps"
@@ -30,6 +31,7 @@ enum FeatureTitle: String, CaseIterable {
         switch self {
         case .animations,
                 .charts,
+                .customShapes,
                 .gradients,
                 .externalLinks,
                 .maps,

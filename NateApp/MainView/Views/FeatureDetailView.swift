@@ -16,6 +16,8 @@ struct FeatureDetailView: View {
                 AnimationsView()
             case .charts:
                 ChartView()
+            case .customShapes:
+                CustomShapesView()
             case .gradients:
                 GradientView()
             case .photoPicker:
