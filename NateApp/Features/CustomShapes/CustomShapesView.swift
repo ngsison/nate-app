@@ -59,8 +59,7 @@ struct MapBalloon: Shape {
         var path = Path()
         path.move(to: bottomCenter)
         path.addCurve(to: topCenter, control1: midLeft, control2: topLeft)
-        path.move(to: bottomCenter)
-        path.addCurve(to: topCenter, control1: midRight, control2: topRight)
+        path.addCurve(to: bottomCenter, control1: topRight, control2: midRight)
         return path
     }
 }
@@ -77,8 +76,7 @@ struct Heart: Shape {
         var path = Path()
         path.move(to: bottomCenter)
         path.addCurve(to: topCenter, control1: midLeft, control2: topLeft)
-        path.move(to: bottomCenter)
-        path.addCurve(to: topCenter, control1: midRight, control2: topRight)
+        path.addCurve(to: bottomCenter, control1: topRight, control2: midRight)
         return path
     }
 }
