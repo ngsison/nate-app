@@ -6,5 +6,5 @@ target 'NateApp' do
   use_frameworks!
 
   # Pods for NateApp
-  
+  pod 'StepperView'
 end
