@@ -94,7 +94,7 @@ fileprivate struct Skills: View {
             
             LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
                 SkillView(title: "Swift", imageName: "swift", imageColor: .red)
-                SkillView(title: "Swift UI", imageName: "swift", imageColor: .blue)
+                SkillView(title: "SwiftUI", imageName: "swift", imageColor: .blue)
                 SkillView(title: "Git", imageName: "arrow.triangle.branch", imageColor: .gray)
             }
         }
