@@ -22,6 +22,7 @@
 		43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B282973CA15002C17DA /* UnitPointChoice.swift */; };
 		43B36B2E2973CA99002C17DA /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B2D2973CA99002C17DA /* ChartViewModel.swift */; };
 		43B36B322973CB98002C17DA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B312973CB98002C17DA /* DateExtension.swift */; };
+		43D79822297AEBE5005486BE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D79821297AEBE5005486BE /* AboutView.swift */; };
 		43E60F1229787BF30069B7D6 /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E60F1129787BF30069B7D6 /* GitHubView.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* FeatureListView.swift */; };
@@ -49,6 +50,7 @@
 		43B36B282973CA15002C17DA /* UnitPointChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPointChoice.swift; sourceTree = "<group>"; };
 		43B36B2D2973CA99002C17DA /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		43B36B312973CB98002C17DA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		43D79821297AEBE5005486BE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		43E60F1129787BF30069B7D6 /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 				786A4F11A047352B980826DF /* Pods-NateApp.debug.xcconfig */,
 				02ED06BD8EC2E1A8A0602F82 /* Pods-NateApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -241,6 +242,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		43D79820297AEBCD005486BE /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				43D79821297AEBE5005486BE /* AboutView.swift */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
 		43E60F0E29787BC70069B7D6 /* GitHubSampleAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +301,7 @@
 			children = (
 				4308F87D297724DF00E53DFB /* Info.plist */,
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
+				43D79820297AEBCD005486BE /* Resume */,
 				43B36B0A2972F032002C17DA /* MainView */,
 				43B36B16297308DF002C17DA /* Features */,
 				4308F87529759A3A00E53DFB /* CustomViews */,
@@ -430,6 +440,7 @@
 				430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */,
 				43B36B262973C92E002C17DA /* FeatureDetailView.swift in Sources */,
 				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
+				43D79822297AEBE5005486BE /* AboutView.swift in Sources */,
 				430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */,
 				43B36B232973C879002C17DA /* MonthViews.swift in Sources */,
 			);
