@@ -16,21 +16,30 @@ struct AboutView: View {
     }
     
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [isDarkMode() ? .black : .white , .gray],
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-            .edgesIgnoringSafeArea(.all)
-            
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    Header()
-                    Skills()
-                    Experiences()
+        NavigationStack {
+            ZStack {
+                LinearGradient(colors: [isDarkMode() ? .black : .white , .gray],
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            Header()
+                            Skills()
+                            Experiences()
+                        }
+                        .padding(.horizontal, 32)
+                        .padding(.vertical)
+                        .navigationTitle("About Me")
+                    }
+                    .scrollIndicators(.hidden)
+                    
+                    Text("v\(Common.appVersion)-\(Common.buildNumber)")
+                        .font(.footnote)
+                        .padding(.bottom)
                 }
-                .padding(.horizontal, 32)
-                .padding(.vertical)
-                .navigationTitle("About Me")
             }
         }
     }
@@ -38,9 +47,7 @@ struct AboutView: View {
 
 struct AboutPreview: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            AboutView()
-        }
+        AboutView()
     }
 }
 
