@@ -25,7 +25,7 @@ struct AboutView: View {
                 
                 VStack {
                     ScrollView {
-                        VStack(spacing: 20) {
+                        VStack(alignment: .leading, spacing: 20) {
                             Header()
                             Skills()
                             Experiences()
