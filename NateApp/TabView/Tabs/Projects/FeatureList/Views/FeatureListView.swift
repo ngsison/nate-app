@@ -12,11 +12,7 @@ struct FeatureListView: View {
     
     var body: some View {
         NavigationStack(path: $viewModel.navigationPath) {
-            VStack {
-                FeatureList(viewModel: viewModel)
-                Text("v\(Common.appVersion):\(Common.buildNumber)")
-                    .padding(.bottom)
-            }
+            FeatureList(viewModel: viewModel)
         }
     }
 }

@@ -9,16 +9,20 @@ import SwiftUI
 import StepperView
 
 struct AboutView: View {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
     
-    private func isDarkMode() -> Bool {
-        colorScheme == .dark
+    private func startColor() -> Color {
+        colorScheme == .dark ? .black : .white
+    }
+    
+    private func endColor() -> Color {
+        colorScheme == .dark ? .gray : .white
     }
     
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [isDarkMode() ? .black : .white , .gray],
+                LinearGradient(colors: [startColor(), endColor()],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
@@ -35,10 +39,6 @@ struct AboutView: View {
                         .navigationTitle("About Me")
                     }
                     .scrollIndicators(.hidden)
-                    
-                    Text("v\(Common.appVersion)-\(Common.buildNumber)")
-                        .font(.footnote)
-                        .padding(.bottom)
                 }
             }
         }

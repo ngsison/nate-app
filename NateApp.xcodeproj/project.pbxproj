@@ -12,6 +12,7 @@
 		430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B529750E8D0055E4F1 /* AnimationsView.swift */; };
 		430247B8297534F70055E4F1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B7297534F70055E4F1 /* Common.swift */; };
 		4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308F8792976298300E53DFB /* CustomShapesView.swift */; };
+		43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43333FAE297D7B0600AD90ED /* AppVersionView.swift */; };
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
@@ -23,6 +24,7 @@
 		43B36B2E2973CA99002C17DA /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B2D2973CA99002C17DA /* ChartViewModel.swift */; };
 		43B36B322973CB98002C17DA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B312973CB98002C17DA /* DateExtension.swift */; };
 		43D79822297AEBE5005486BE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D79821297AEBE5005486BE /* AboutView.swift */; };
+		43D79825297C54C2005486BE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D79824297C54C2005486BE /* MainTabView.swift */; };
 		43E60F1229787BF30069B7D6 /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E60F1129787BF30069B7D6 /* GitHubView.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
 		43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* FeatureListView.swift */; };
@@ -40,6 +42,7 @@
 		430247B7297534F70055E4F1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4308F8792976298300E53DFB /* CustomShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesView.swift; sourceTree = "<group>"; };
 		4308F87D297724DF00E53DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		43333FAE297D7B0600AD90ED /* AppVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionView.swift; sourceTree = "<group>"; };
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		43B36B2D2973CA99002C17DA /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		43B36B312973CB98002C17DA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		43D79821297AEBE5005486BE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		43D79824297C54C2005486BE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		43E60F1129787BF30069B7D6 /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
@@ -98,11 +102,12 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		4308F87529759A3A00E53DFB /* CustomViews */ = {
+		4308F87529759A3A00E53DFB /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				43333FAE297D7B0600AD90ED /* AppVersionView.swift */,
 			);
-			path = CustomViews;
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 		4308F8782976296D00E53DFB /* CustomShapes */ = {
@@ -113,14 +118,40 @@
 			path = CustomShapes;
 			sourceTree = "<group>";
 		};
-		43B36B0A2972F032002C17DA /* MainView */ = {
+		43333FB0297D7B2900AD90ED /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				43D79820297AEBCD005486BE /* Home */,
+				43333FB4297D815100AD90ED /* Projects */,
+				43333FB5297D816B00AD90ED /* Contact */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		43333FB4297D815100AD90ED /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				43B36B0A2972F032002C17DA /* FeatureList */,
+				43B36B16297308DF002C17DA /* Features */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		43333FB5297D816B00AD90ED /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		43B36B0A2972F032002C17DA /* FeatureList */ = {
 			isa = PBXGroup;
 			children = (
 				43B36B0B2972F20A002C17DA /* Models */,
 				43B36B0D2972F215002C17DA /* ViewModels */,
 				43B36B0C2972F211002C17DA /* Views */,
 			);
-			path = MainView;
+			path = FeatureList;
 			sourceTree = "<group>";
 		};
 		43B36B0B2972F20A002C17DA /* Models */ = {
@@ -242,12 +273,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		43D79820297AEBCD005486BE /* Resume */ = {
+		43D79820297AEBCD005486BE /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				43D79821297AEBE5005486BE /* AboutView.swift */,
 			);
-			path = Resume;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		43D79823297C54AE005486BE /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				43D79824297C54C2005486BE /* MainTabView.swift */,
+				43333FB0297D7B2900AD90ED /* Tabs */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		43E60F0E29787BC70069B7D6 /* GitHubSampleAPI */ = {
@@ -301,13 +341,11 @@
 			children = (
 				4308F87D297724DF00E53DFB /* Info.plist */,
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
-				43D79820297AEBCD005486BE /* Resume */,
-				43B36B0A2972F032002C17DA /* MainView */,
-				43B36B16297308DF002C17DA /* Features */,
-				4308F87529759A3A00E53DFB /* CustomViews */,
+				43D79823297C54AE005486BE /* TabView */,
+				4308F87529759A3A00E53DFB /* SharedViews */,
 				43B36B2F2973CB78002C17DA /* Utilities */,
-				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
+				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 			);
 			path = NateApp;
 			sourceTree = "<group>";
@@ -444,6 +482,7 @@
 			files = (
 				430247B8297534F70055E4F1 /* Common.swift in Sources */,
 				430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */,
+				43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */,
 				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,
 				43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */,
@@ -461,6 +500,7 @@
 				43D79822297AEBE5005486BE /* AboutView.swift in Sources */,
 				430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */,
 				43B36B232973C879002C17DA /* MonthViews.swift in Sources */,
+				43D79825297C54C2005486BE /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
