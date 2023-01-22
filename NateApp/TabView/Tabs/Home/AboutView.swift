@@ -33,6 +33,7 @@ struct AboutView: View {
                             Header()
                             Skills()
                             Experiences()
+                            Education()
                         }
                         .padding(.horizontal, 32)
                         .padding(.vertical)
@@ -98,7 +99,7 @@ fileprivate struct Skills: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Skills")
-                .font(.headline)
+                .font(.system(size: 20, weight: .medium))
                 .padding(.top)
             
             LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
@@ -153,8 +154,8 @@ fileprivate struct Experiences: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Experience")
-                .font(.headline)
+            Text("Work Experience")
+                .font(.system(size: 20, weight: .medium))
                 .padding(.top)
             
             StepperView()
@@ -182,9 +183,31 @@ fileprivate struct Experience: View {
                 .font(.system(size: 16))
             
             Text(year)
-                .font(.system(size: 16))
+                .font(.system(size: 14))
                 .foregroundColor(.secondary)
             
+        }
+    }
+}
+
+fileprivate struct Education: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Education")
+                .font(.system(size: 20, weight: .medium))
+                .padding(.top)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Bachelor of Science in Information Technology")
+                    .font(.system(size: 16, weight: .medium))
+                
+                Text("Central Luzon State University")
+                    .font(.system(size: 16))
+                
+                Text("2011 - 2016")
+                    .font(.system(size: 14))
+                    .foregroundColor(.secondary)
+            }
         }
     }
 }
