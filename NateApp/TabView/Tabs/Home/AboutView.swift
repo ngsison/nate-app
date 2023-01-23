@@ -182,11 +182,11 @@ fileprivate struct Experiences: View {
                  Experience(jobTitle: "Junior .NET Developer", companyName: "Smart Communications, Inc.", year: "2016 - 2017"),
                  Experience(jobTitle: "Student Partner", companyName: "Microsoft", year: "2015 - 2016")]
     
-    let indicationTypes = [StepperIndicationType.custom(NumberedCircleView(text: "4")),
-                           .custom(NumberedCircleView(text: "3")),
-                           .custom(NumberedCircleView(text: "2")),
-                           .custom(NumberedCircleView(text: "1")),
-                           .custom(NumberedCircleView(text: "-"))]
+    let indicationTypes: [StepperIndicationType] = [.custom(CompanyLogo(imageName: "upwork")),
+                                                    .custom(CompanyLogo(imageName: "gcash")),
+                                                    .custom(CompanyLogo(imageName: "tap")),
+                                                    .custom(CompanyLogo(imageName: "smart")),
+                                                    .custom(CompanyLogo(imageName: "microsoft"))]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -201,6 +201,18 @@ fileprivate struct Experiences: View {
                 .lineOptions(.custom(1, .gray))
                 .stepperEdgeInsets(EdgeInsets(.zero))
         }
+    }
+}
+
+fileprivate struct CompanyLogo: View {
+    var imageName: String
+    
+    var body: some View {
+        Image(imageName)
+            .resizable()
+            .frame(width: 48, height: 48)
+            .cornerRadius(24)
+            .scaledToFit()
     }
 }
 
@@ -281,14 +293,14 @@ fileprivate struct SpeakingEngagements: View {
             
             Event(title: "Microsoft Cognitive Services",
                   eventName: "Programmers / Developers Meetup 3",
-                  image: "microsoft",
+                  image: "event-microsoft",
                   caption: "One of the audience testing the app I created on my first talk and live coding demo at Microsoft PH :)",
                   location: "Microsoft Philippines",
                   date: "March 26, 2017")
             
             Event(title: "Microsoft App Center",
                   eventName: "MondPH DevOps Session",
-                  image: "app-center",
+                  image: "event-app-center",
                   caption: #"After-event photo at Microsoft PH where I demoed "Continuous Delivery" using Microsoft App Center"#,
                   location: "Microsoft Philippines",
                   date: "July 16, 2017")
@@ -310,7 +322,7 @@ fileprivate struct Event: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.system(size: 18, weight: .medium))
-                    
+                
                 Text(eventName)
                     .font(.system(size: 16))
             }
