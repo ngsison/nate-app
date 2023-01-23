@@ -21,20 +21,18 @@ struct AboutView: View {
                                endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea([.top, .horizontal])
                 
-                VStack {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 20) {
-                            Header()
-                            Skills()
-                            Experiences()
-                            Education()
-                        }
-                        .padding(.horizontal, 32)
-                        .padding(.vertical)
-                        .navigationTitle("About Me")
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Header()
+                        Skills()
+                        Experiences()
+                        Education()
                     }
-                    .scrollIndicators(.hidden)
+                    .padding(.horizontal, 32)
+                    .padding(.vertical)
+                    .navigationTitle("About Me")
                 }
+                .scrollIndicators(.hidden)
             }
             .toolbar {
                 ToolbarItem {
