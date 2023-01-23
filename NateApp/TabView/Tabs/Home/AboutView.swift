@@ -24,8 +24,11 @@ struct AboutView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         Header()
+                        Divider()
                         Skills()
+                        Divider()
                         Experiences()
+                        Divider()
                         Education()
                     }
                     .padding(.horizontal, 32)
@@ -64,7 +67,7 @@ struct AboutPreview: PreviewProvider {
 
 fileprivate struct Header: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 12) {
                 Image("avatar")
                     .resizable()
@@ -96,27 +99,25 @@ fileprivate struct Header: View {
             Text("More than 6 years of experience in Software Development, specializing in iOS.")
                 .font(.system(size: 14, weight: .light))
                 .foregroundColor(.primary)
-                .padding(.top)
         }
     }
 }
 
 fileprivate struct Skills: View {
-    private let columns = [GridItem(.fixed(98)),
-                           GridItem(.fixed(98)),
-                           GridItem(.fixed(98))]
+    private let columns = [GridItem(.fixed(80)),
+                           GridItem(.fixed(80)),
+                           GridItem(.fixed(80))]
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
             Text("⚡️ Skills")
-                .font(.system(size: 24, weight: .medium))
-                .padding(.top)
+                .font(.system(size: 20, weight: .medium))
             
             LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
-                SkillView(title: "Swift", imageName: "swift", imageColor: .red)
-                SkillView(title: "SwiftUI", imageName: "swift", imageColor: .blue)
-                SkillView(title: "Git", imageName: "arrow.triangle.branch", imageColor: .gray)
-                SkillView(title: "Public\nSpeaking", imageName: "megaphone.fill", imageColor: .cyan)
+                SkillView(title: "Swift", systemImageName: "swift", imageColor: .red)
+                SkillView(title: "SwiftUI", systemImageName: "swift", imageColor: .blue)
+                SkillView(title: "Git", systemImageName: "arrow.triangle.branch", imageColor: .gray)
+                SkillView(title: "Public\nSpeaking", titleSize: 10, systemImageName: "megaphone.fill", imageColor: .cyan)
             }
         }
     }
@@ -125,27 +126,40 @@ fileprivate struct Skills: View {
 fileprivate struct SkillView: View {
     
     var title: String
-    var imageName: String
+    var titleSize: CGFloat = 14
+    var imageName: String? = nil
+    var systemImageName: String? = nil
     var imageColor: Color
+    
+    func imageView() -> Image? {
+        if let systemImageName {
+            return Image(systemName: systemImageName)
+        } else if let imageName {
+            return Image(imageName)
+        } else {
+            return nil
+        }
+    }
     
     var body: some View {
         ZStack {
             Color.white
             
             VStack(spacing: 10) {
-                Image(systemName: imageName)
+                imageView()?
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 24, height: 24)
                     .foregroundColor(imageColor)
                 
                 Text(title)
-                    .font(.system(size: 15, weight: .regular))
+                    .font(.system(size: titleSize, weight: .regular))
                     .foregroundColor(.black)
                     .lineLimit(2)
+                    .padding(.horizontal, 4)
             }
         }
-        .frame(width: 90, height: 90)
+        .frame(width: 70, height: 70)
         .cornerRadius(10)
         .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 4)
     }
@@ -165,16 +179,15 @@ fileprivate struct Experiences: View {
                            .custom(NumberedCircleView(text: "-"))]
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
             Text("💻 Work Experience")
-                .font(.system(size: 24, weight: .medium))
-                .padding(.top)
+                .font(.system(size: 20, weight: .medium))
             
             StepperView()
                 .addSteps(steps)
                 .indicators(indicationTypes)
                 .stepIndicatorMode(.vertical)
-                .spacing(30)
+                .spacing(24)
                 .lineOptions(.custom(1, .gray))
                 .stepperEdgeInsets(EdgeInsets(.zero))
         }
@@ -204,38 +217,47 @@ fileprivate struct Experience: View {
 
 fileprivate struct Education: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 20) {
             Text("🎓 Education")
                 .font(.system(size: 24, weight: .medium))
-                .padding(.top)
+            School()
+            Awards()
+        }
+    }
+}
+
+fileprivate struct School: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Bachelor of Science in Information Technology")
+                .font(.system(size: 18, weight: .medium))
             
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Bachelor of Science in Information Technology")
-                    .font(.system(size: 18, weight: .medium))
-                
-                Text("Central Luzon State University")
-                    .font(.system(size: 16))
-                
-                Text("2011 - 2016")
-                    .font(.system(size: 14))
-                    .foregroundColor(.secondary)
-            }
+            Text("Central Luzon State University")
+                .font(.system(size: 16))
             
-            Spacer(minLength: 4)
-            
+            Text("2011 - 2016")
+                .font(.system(size: 14))
+                .foregroundColor(.secondary)
+        }
+    }
+}
+
+fileprivate struct Awards: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
             Text("⭐️ Awards")
                 .font(.system(size: 20, weight: .medium))
             
-            VStack(alignment: .leading, spacing: 4) {
-                Text("• C Programming Competition🥉 (3rd place)")
-                    .font(.system(size: 16))
-                
-                Text("• Microsoft App Dev Challenge🥈(2nd place)")
-                    .font(.system(size: 16))
-                
-                Text("• UP-ACM Algolympics 2016 (participant)")
-                    .font(.system(size: 16))
-            }
+            Spacer(minLength: 4)
+            
+            Text("• C Programming Competition🥉 (3rd place)")
+                .font(.system(size: 14, weight: .light))
+            
+            Text("• Microsoft App Dev Challenge🥈(2nd place)")
+                .font(.system(size: 14, weight: .light))
+            
+            Text("• UP-ACM Algolympics 2016 (participant)")
+                .font(.system(size: 14, weight: .light))
         }
     }
 }
