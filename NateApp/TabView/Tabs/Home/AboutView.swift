@@ -10,19 +10,13 @@ import StepperView
 
 struct AboutView: View {
     @Environment(\.colorScheme) private var colorScheme
-    
-    private func startColor() -> Color {
-        colorScheme == .dark ? .black : .white
-    }
-    
-    private func endColor() -> Color {
-        colorScheme == .dark ? .gray : .white
-    }
+    @State private var userColorScheme: ColorScheme?
     
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [startColor(), endColor()],
+                LinearGradient(colors: [userColorScheme == .dark ? .black : .white,
+                                        userColorScheme == .dark ? .gray  : .white],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea([.top, .horizontal])
@@ -42,6 +36,24 @@ struct AboutView: View {
                     .scrollIndicators(.hidden)
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        guard let oldUserColorScheme = userColorScheme else { return }
+                        if oldUserColorScheme == .dark {
+                            userColorScheme = .light
+                        } else {
+                            userColorScheme = .dark
+                        }
+                    } label: {
+                        Image(systemName: userColorScheme == .dark ? "sun.max" : "moon")
+                    }
+                }
+            }
+        }
+        .preferredColorScheme(userColorScheme ?? colorScheme)
+        .onAppear {
+            userColorScheme = colorScheme
         }
     }
 }
