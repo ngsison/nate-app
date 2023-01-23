@@ -131,8 +131,6 @@
 		43333FB4297D815100AD90ED /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				43B36B0A2972F032002C17DA /* FeatureList */,
-				43B36B16297308DF002C17DA /* Features */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -341,6 +339,8 @@
 			children = (
 				4308F87D297724DF00E53DFB /* Info.plist */,
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
+				43B36B0A2972F032002C17DA /* FeatureList */,
+				43B36B16297308DF002C17DA /* Features */,
 				43D79823297C54AE005486BE /* TabView */,
 				4308F87529759A3A00E53DFB /* SharedViews */,
 				43B36B2F2973CB78002C17DA /* Utilities */,

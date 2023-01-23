@@ -17,7 +17,7 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house")
                 }
             
-            FeatureListView()
+            Text("Projects")
                 .tabItem {
                     Label("Projects", systemImage: "latch.2.case")
                 }
