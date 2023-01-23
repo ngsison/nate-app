@@ -108,8 +108,8 @@ fileprivate struct Skills: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Skills")
-                .font(.system(size: 20, weight: .medium))
+            Text("⚡️ Skills")
+                .font(.system(size: 24, weight: .medium))
                 .padding(.top)
             
             LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
@@ -164,8 +164,8 @@ fileprivate struct Experiences: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Work Experience")
-                .font(.system(size: 20, weight: .medium))
+            Text("💻 Work Experience")
+                .font(.system(size: 24, weight: .medium))
                 .padding(.top)
             
             StepperView()
@@ -203,13 +203,13 @@ fileprivate struct Experience: View {
 fileprivate struct Education: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Education")
-                .font(.system(size: 20, weight: .medium))
+            Text("🎓 Education")
+                .font(.system(size: 24, weight: .medium))
                 .padding(.top)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text("Bachelor of Science in Information Technology")
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.system(size: 18, weight: .medium))
                 
                 Text("Central Luzon State University")
                     .font(.system(size: 16))
@@ -217,6 +217,22 @@ fileprivate struct Education: View {
                 Text("2011 - 2016")
                     .font(.system(size: 14))
                     .foregroundColor(.secondary)
+            }
+            
+            Spacer(minLength: 4)
+            
+            Text("⭐️ Awards")
+                .font(.system(size: 20, weight: .medium))
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("• C Programming Competition🥉 (3rd place)")
+                    .font(.system(size: 16))
+                
+                Text("• Microsoft App Dev Challenge🥈(2nd place)")
+                    .font(.system(size: 16))
+                
+                Text("• UP-ACM Algolympics 2016 (participant)")
+                    .font(.system(size: 16))
             }
         }
     }
