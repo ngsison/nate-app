@@ -280,23 +280,32 @@ fileprivate struct SpeakingEngagements: View {
                 .padding([.horizontal, .bottom])
             
             VStack {
-                Event()
+                Event(title: "Microsoft Cognitive Services",
+                      image: "microsoft",
+                      caption: "One of the audience testing the app I created on my first talk and live coding demo at Microsoft PH :)",
+                      location: "Microsoft Philippines",
+                      date: "March 26, 2017")
             }
         }
     }
 }
 
 fileprivate struct Event: View {
+    var title: String
+    var image: String
+    var caption: String
+    var location: String
+    var date: String
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Microsoft Cognitive Services")
+            Text(title)
                 .font(.system(size: 18, weight: .medium))
                 .padding(.horizontal)
             
-            Image("microsoft")
+            Image(image)
                 .resizable()
                 .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text("One of the audience testing the app I created on my first talk and live coding demo at Microsoft PH :)")
