@@ -220,7 +220,7 @@ fileprivate struct Education: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("🎓 Education")
-                .font(.system(size: 24, weight: .medium))
+                .font(.system(size: 20, weight: .medium))
             School()
             Awards()
         }
