@@ -19,7 +19,7 @@ struct AboutView: View {
                                         userColorScheme == .dark ? .gray  : .white],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea([.top, .horizontal])
+                .edgesIgnoringSafeArea(.all)
                 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
