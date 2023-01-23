@@ -25,7 +25,7 @@ struct AboutView: View {
                 LinearGradient(colors: [startColor(), endColor()],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea([.top, .horizontal])
                 
                 VStack {
                     ScrollView {
