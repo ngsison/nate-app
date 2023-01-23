@@ -102,9 +102,9 @@ fileprivate struct Header: View {
 }
 
 fileprivate struct Skills: View {
-    private let columns = [GridItem(.fixed(80)),
-                           GridItem(.fixed(80)),
-                           GridItem(.fixed(80))]
+    private let columns = [GridItem(.fixed(98)),
+                           GridItem(.fixed(98)),
+                           GridItem(.fixed(98))]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -112,10 +112,11 @@ fileprivate struct Skills: View {
                 .font(.system(size: 24, weight: .medium))
                 .padding(.top)
             
-            LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
                 SkillView(title: "Swift", imageName: "swift", imageColor: .red)
                 SkillView(title: "SwiftUI", imageName: "swift", imageColor: .blue)
                 SkillView(title: "Git", imageName: "arrow.triangle.branch", imageColor: .gray)
+                SkillView(title: "Public\nSpeaking", imageName: "megaphone.fill", imageColor: .cyan)
             }
         }
     }
@@ -131,19 +132,20 @@ fileprivate struct SkillView: View {
         ZStack {
             Color.white
             
-            VStack {
+            VStack(spacing: 10) {
                 Image(systemName: imageName)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 24, height: 24)
+                    .frame(width: 30, height: 30)
                     .foregroundColor(imageColor)
                 
                 Text(title)
-                    .font(.system(size: 14, weight: .regular))
+                    .font(.system(size: 15, weight: .regular))
                     .foregroundColor(.black)
+                    .lineLimit(2)
             }
         }
-        .frame(width: 70, height: 70)
+        .frame(width: 90, height: 90)
         .cornerRadius(10)
         .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 4)
     }
