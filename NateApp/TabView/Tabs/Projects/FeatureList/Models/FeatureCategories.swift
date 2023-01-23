@@ -19,12 +19,10 @@ enum FeatureTitle: String, CaseIterable {
     case charts = "Charts"
     case customShapes = "Custom Shapes"
     case gradients = "Gradients"
-    case externalLinks = "External Links"
     case maps = "Maps"
     case photoPicker = "PhotoPicker"
     
     // MARK: - Networking Features
-    case fileDownload = "File Download"
     case githubApi = "GitHub Sample API"
     
     var category: FeatureCategoryTitle {
@@ -33,13 +31,11 @@ enum FeatureTitle: String, CaseIterable {
                 .charts,
                 .customShapes,
                 .gradients,
-                .externalLinks,
                 .maps,
                 .photoPicker:
             return .ui
             
-        case .fileDownload,
-                .githubApi:
+        case .githubApi:
             return .networking
         }
     }
