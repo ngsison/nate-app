@@ -23,15 +23,20 @@ struct AboutView: View {
                 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        Header()
-                        Divider()
-                        Skills()
-                        Divider()
-                        Experiences()
-                        Divider()
-                        Education()
+                        Header().padding(.horizontal)
+                        Divider().padding(.horizontal)
+                        
+                        Skills().padding(.horizontal)
+                        Divider().padding(.horizontal)
+                        
+                        Experiences().padding(.horizontal)
+                        Divider().padding(.horizontal)
+                        
+                        Education().padding(.horizontal)
+                        Divider().padding(.horizontal)
+                        
+                        SpeakingEngagements()
                     }
-                    .padding(.horizontal, 32)
                     .padding(.vertical)
                     .navigationTitle("About Me")
                 }
@@ -106,6 +111,7 @@ fileprivate struct Header: View {
 fileprivate struct Skills: View {
     private let columns = [GridItem(.fixed(80)),
                            GridItem(.fixed(80)),
+                           GridItem(.fixed(80)),
                            GridItem(.fixed(80))]
     
     var body: some View {
@@ -116,7 +122,10 @@ fileprivate struct Skills: View {
             LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
                 SkillView(title: "Swift", systemImageName: "swift", imageColor: .red)
                 SkillView(title: "SwiftUI", systemImageName: "swift", imageColor: .blue)
-                SkillView(title: "Git", systemImageName: "arrow.triangle.branch", imageColor: Color(hex: "515151"))
+                SkillView(title: "Git", imageName: "git")
+                SkillView(title: "Jira", imageName: "jira")
+                SkillView(title: "Javascript", titleSize: 10, imageName: "javascript")
+                SkillView(title: "React Native", titleSize: 10, imageName: "react-native")
                 SkillView(title: "Public\nSpeaking", titleSize: 10, systemImageName: "megaphone.fill", imageColor: .cyan)
             }
         }
@@ -130,7 +139,7 @@ fileprivate struct SkillView: View {
     var titleSize: CGFloat = 14
     var imageName: String? = nil
     var systemImageName: String? = nil
-    var imageColor: Color
+    var imageColor: Color = .clear
     
     func imageView() -> Image? {
         if let systemImageName {
@@ -259,6 +268,49 @@ fileprivate struct Awards: View {
             
             Text("• UP-ACM Algolympics 2016 (participant)")
                 .font(.system(size: 14, weight: .light))
+        }
+    }
+}
+
+fileprivate struct SpeakingEngagements: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Text("🔈 Speaking Engagements")
+                .font(.system(size: 20, weight: .medium))
+                .padding([.horizontal, .bottom])
+            
+            VStack {
+                Event()
+            }
+        }
+    }
+}
+
+fileprivate struct Event: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Microsoft Cognitive Services")
+                .font(.system(size: 18, weight: .medium))
+                .padding(.horizontal)
+            
+            Image("microsoft")
+                .resizable()
+                .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("One of the audience testing the app I created on my first talk and live coding demo at Microsoft PH :)")
+                    .font(.system(size: 14))
+                
+                Text("March 26, 2017")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+                
+                Text("Microsoft Philippines")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.horizontal)
         }
     }
 }
