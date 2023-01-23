@@ -10,16 +10,16 @@ import SwiftUI
 struct CustomShapesView: View {
     var body: some View {
         HStack {
-            Heart()
-                .frame(width: 100, height: 100)
-                .foregroundColor(.blue)
-            
             Triangle()
-                .frame(width: 100, height: 100)
+                .frame(width: 80, height: 80)
                 .foregroundColor(.orange)
             
+            Heart()
+                .frame(width: 120, height: 100)
+                .foregroundColor(.blue)
+            
             MapBalloon()
-                .frame(width: 100, height: 100)
+                .frame(width: 80, height: 80)
                 .foregroundColor(.mint)
         }
         .frame(height: 200)
