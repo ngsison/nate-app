@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct UnitPointChoice: Identifiable, Hashable {
-    var id = UUID()
+struct UnitPointChoice: Hashable {
     var title: String
     var unitPoint: UnitPoint
 }

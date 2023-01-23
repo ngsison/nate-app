@@ -41,7 +41,7 @@ fileprivate struct UnitPointPicker: View {
     
     var body: some View {
         Picker(title, selection: $selection) {
-            ForEach(choices) { choice in
+            ForEach(choices, id: \.self) { choice in
                 Text(choice.title).tag(choice)
             }
         }
