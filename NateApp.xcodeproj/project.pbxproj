@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43015437297EFA2D0080A1B5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43015436297EFA2D0080A1B5 /* ColorExtension.swift */; };
 		430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247AF2974410E0055E4F1 /* PhotoPickerView.swift */; };
 		430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B1297441270055E4F1 /* PhotoPicker.swift */; };
 		430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B529750E8D0055E4F1 /* AnimationsView.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		02ED06BD8EC2E1A8A0602F82 /* Pods-NateApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateApp.release.xcconfig"; path = "Target Support Files/Pods-NateApp/Pods-NateApp.release.xcconfig"; sourceTree = "<group>"; };
 		16F5FC16534CB4B5008A5A59 /* Pods_NateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43015436297EFA2D0080A1B5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		430247AF2974410E0055E4F1 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		430247B1297441270055E4F1 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		430247B529750E8D0055E4F1 /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		43B36B302973CB8C002C17DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				43015436297EFA2D0080A1B5 /* ColorExtension.swift */,
 				43B36B312973CB98002C17DA /* DateExtension.swift */,
 			);
 			path = Extensions;
@@ -482,6 +485,7 @@
 			files = (
 				430247B8297534F70055E4F1 /* Common.swift in Sources */,
 				430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */,
+				43015437297EFA2D0080A1B5 /* ColorExtension.swift in Sources */,
 				43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */,
 				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,

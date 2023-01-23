@@ -116,7 +116,7 @@ fileprivate struct Skills: View {
             LazyVGrid(columns: columns, alignment: .leading, spacing: 16) {
                 SkillView(title: "Swift", systemImageName: "swift", imageColor: .red)
                 SkillView(title: "SwiftUI", systemImageName: "swift", imageColor: .blue)
-                SkillView(title: "Git", systemImageName: "arrow.triangle.branch", imageColor: .gray)
+                SkillView(title: "Git", systemImageName: "arrow.triangle.branch", imageColor: Color(hex: "515151"))
                 SkillView(title: "Public\nSpeaking", titleSize: 10, systemImageName: "megaphone.fill", imageColor: .cyan)
             }
         }
@@ -124,6 +124,7 @@ fileprivate struct Skills: View {
 }
 
 fileprivate struct SkillView: View {
+    @Environment(\.colorScheme) private var colorScheme
     
     var title: String
     var titleSize: CGFloat = 14
@@ -143,7 +144,7 @@ fileprivate struct SkillView: View {
     
     var body: some View {
         ZStack {
-            Color.white
+            colorScheme == .dark ? Color.gray : Color.white
             
             VStack(spacing: 10) {
                 imageView()?
