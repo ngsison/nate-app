@@ -14,6 +14,11 @@
 		430247B8297534F70055E4F1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B7297534F70055E4F1 /* Common.swift */; };
 		4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308F8792976298300E53DFB /* CustomShapesView.swift */; };
 		43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43333FAE297D7B0600AD90ED /* AppVersionView.swift */; };
+		439E07402982F4B5001C5923 /* AboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E073F2982F4B5001C5923 /* AboutHeaderView.swift */; };
+		439E07432982F4DA001C5923 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07422982F4DA001C5923 /* SkillsView.swift */; };
+		439E07452982F518001C5923 /* ExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07442982F518001C5923 /* ExperiencesView.swift */; };
+		439E07472982F5A2001C5923 /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07462982F5A2001C5923 /* EducationView.swift */; };
+		439E07492982F5CB001C5923 /* SpeakingEngagementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07482982F5CB001C5923 /* SpeakingEngagementsView.swift */; };
 		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
@@ -45,6 +50,11 @@
 		4308F8792976298300E53DFB /* CustomShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesView.swift; sourceTree = "<group>"; };
 		4308F87D297724DF00E53DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43333FAE297D7B0600AD90ED /* AppVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionView.swift; sourceTree = "<group>"; };
+		439E073F2982F4B5001C5923 /* AboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderView.swift; sourceTree = "<group>"; };
+		439E07422982F4DA001C5923 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		439E07442982F518001C5923 /* ExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesView.swift; sourceTree = "<group>"; };
+		439E07462982F5A2001C5923 /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
+		439E07482982F5CB001C5923 /* SpeakingEngagementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingEngagementsView.swift; sourceTree = "<group>"; };
 		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -142,6 +152,33 @@
 			children = (
 			);
 			path = Contact;
+			sourceTree = "<group>";
+		};
+		439E073C2982F457001C5923 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43D79821297AEBE5005486BE /* AboutView.swift */,
+				439E073F2982F4B5001C5923 /* AboutHeaderView.swift */,
+				439E07422982F4DA001C5923 /* SkillsView.swift */,
+				439E07442982F518001C5923 /* ExperiencesView.swift */,
+				439E07462982F5A2001C5923 /* EducationView.swift */,
+				439E07482982F5CB001C5923 /* SpeakingEngagementsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		439E073D2982F45D001C5923 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		439E073E2982F464001C5923 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		43B36B0A2972F032002C17DA /* FeatureList */ = {
@@ -277,7 +314,9 @@
 		43D79820297AEBCD005486BE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				43D79821297AEBE5005486BE /* AboutView.swift */,
+				439E073E2982F464001C5923 /* Models */,
+				439E073D2982F45D001C5923 /* ViewModels */,
+				439E073C2982F457001C5923 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -483,9 +522,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439E07432982F4DA001C5923 /* SkillsView.swift in Sources */,
 				430247B8297534F70055E4F1 /* Common.swift in Sources */,
 				430247B2297441270055E4F1 /* PhotoPicker.swift in Sources */,
 				43015437297EFA2D0080A1B5 /* ColorExtension.swift in Sources */,
+				439E07452982F518001C5923 /* ExperiencesView.swift in Sources */,
 				43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */,
 				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,
@@ -500,11 +541,14 @@
 				43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */,
 				430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */,
 				43B36B262973C92E002C17DA /* FeatureDetailView.swift in Sources */,
+				439E07492982F5CB001C5923 /* SpeakingEngagementsView.swift in Sources */,
 				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
 				43D79822297AEBE5005486BE /* AboutView.swift in Sources */,
 				430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */,
 				43B36B232973C879002C17DA /* MonthViews.swift in Sources */,
+				439E07402982F4B5001C5923 /* AboutHeaderView.swift in Sources */,
 				43D79825297C54C2005486BE /* MainTabView.swift in Sources */,
+				439E07472982F5A2001C5923 /* EducationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
