@@ -17,19 +17,12 @@ struct Experience: Hashable {
 struct CompanyLogo: Hashable {
     var size: CGFloat
     var imageName: String
-    var linePosition: LinePosition
-    var lineWidth: CGFloat = 1
-    var lineColor: Color = .gray
-}
-
-enum LinePosition {
-    case top
-    case mid
-    case bottom
 }
 
 struct ExperiencesView: View {
     let logoSize: CGFloat = 50
+    let spacing: CGFloat = 24
+    private let horizontalPadding: CGFloat = 12
     
     let experiences = [Experience(jobTitle: "Freelance iOS Developer", companyName: "Upwork", companyImage: "upwork", year: "May 2021 - Present"),
                        Experience(jobTitle: "Lead iOS Engineer", companyName: "GCash", companyImage: "gcash", year: "Dec 2018 - June 2021"),
@@ -37,24 +30,34 @@ struct ExperiencesView: View {
                        Experience(jobTitle: "Junior .NET Developer", companyName: "Smart Communications, Inc.", companyImage: "smart", year: "2016 - 2017"),
                        Experience(jobTitle: "Student Partner", companyName: "Microsoft", companyImage: "microsoft", year: "2015 - 2016")]
     
+    func lineHeight() -> CGFloat {
+        let totalExperienceViewsHeight = max(logoSize, 62) * CGFloat(experiences.count)
+        let totalSpacing = spacing * CGFloat(experiences.count - 1)
+        let excessHeight = abs(62 - logoSize)
+        
+        return totalExperienceViewsHeight + totalSpacing - excessHeight
+    }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading) {
             Text("💻 Work Experience")
                 .font(.system(size: 20, weight: .medium))
             
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(0 ..< experiences.count, id: \.self) { i in
-                    ExperienceView(experience: experiences[i],
-                                   companyLogo: CompanyLogo(size: logoSize,
-                                                            imageName: experiences[i].companyImage,
-                                                            linePosition: i == 0
-                                                            ? .bottom
-                                                            : i == experiences.count - 1
-                                                            ? .top
-                                                            : .mid))
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .fill(.gray)
+                    .frame(width: 1, height: lineHeight())
+                    .offset(x: horizontalPadding + (logoSize / 2))
+                
+                VStack(alignment: .leading, spacing: spacing) {
+                    ForEach(0 ..< experiences.count, id: \.self) { i in
+                        ExperienceView(experience: experiences[i],
+                                       companyLogo: CompanyLogo(size: logoSize,
+                                                                imageName: experiences[i].companyImage))
+                    }
                 }
+                .padding(.horizontal, horizontalPadding)
             }
-            .padding(.horizontal, 12)
         }
     }
 }
@@ -74,18 +77,20 @@ struct ExperienceView: View {
         HStack(spacing: spacing) {
             CompanyLogoView(companyLogo: companyLogo)
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(experience.jobTitle)
                     .font(.system(size: 16, weight: .medium))
+                    .frame(height: 16)
                 
                 Text(experience.companyName)
                     .font(.system(size: 16))
+                    .frame(height: 16)
                 
                 Text(experience.year)
                     .font(.system(size: 14))
                     .foregroundColor(.secondary)
+                    .frame(height: 14)
             }
-            .padding(.vertical)
         }
     }
 }
@@ -93,40 +98,11 @@ struct ExperienceView: View {
 struct CompanyLogoView: View {
     var companyLogo: CompanyLogo
     
-    func lineHeight() -> CGFloat {
-        switch companyLogo.linePosition {
-        case .top:
-            return companyLogo.size
-        case .mid:
-            return companyLogo.size * 2
-        case .bottom:
-            return companyLogo.size
-        }
-    }
-    
-    func lineYOffset() -> CGFloat {
-        switch companyLogo.linePosition {
-        case .top:
-            return -lineHeight()
-        case .mid:
-            return 0
-        case .bottom:
-            return lineHeight()
-        }
-    }
-    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(companyLogo.lineColor)
-                .frame(width: companyLogo.lineWidth, height: lineHeight())
-                .offset(x: 0, y: lineYOffset())
-            
-            Image(companyLogo.imageName)
-                .resizable()
-                .frame(width: companyLogo.size, height: companyLogo.size)
-                .cornerRadius(companyLogo.size / 2)
-                .scaledToFit()
-        }
+        Image(companyLogo.imageName)
+            .resizable()
+            .frame(width: companyLogo.size, height: companyLogo.size)
+            .cornerRadius(companyLogo.size / 2)
+            .scaledToFit()
     }
 }

@@ -36,12 +36,9 @@
 		43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* FeatureListView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
 		43F4C73F2972CA8A0002FEEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */; };
-		75F291D49E9C68E379167590 /* Pods_NateApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F5FC16534CB4B5008A5A59 /* Pods_NateApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02ED06BD8EC2E1A8A0602F82 /* Pods-NateApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateApp.release.xcconfig"; path = "Target Support Files/Pods-NateApp/Pods-NateApp.release.xcconfig"; sourceTree = "<group>"; };
-		16F5FC16534CB4B5008A5A59 /* Pods_NateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43015436297EFA2D0080A1B5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		430247AF2974410E0055E4F1 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		430247B1297441270055E4F1 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		43F4C7392972CA880002FEEF /* FeatureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureListView.swift; sourceTree = "<group>"; };
 		43F4C73B2972CA8A0002FEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		786A4F11A047352B980826DF /* Pods-NateApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateApp.debug.xcconfig"; path = "Target Support Files/Pods-NateApp/Pods-NateApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,22 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F291D49E9C68E379167590 /* Pods_NateApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24BD37E1511E2BFE5772EDA7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				786A4F11A047352B980826DF /* Pods-NateApp.debug.xcconfig */,
-				02ED06BD8EC2E1A8A0602F82 /* Pods-NateApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		430247AE297440F70055E4F1 /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,8 +349,6 @@
 			children = (
 				43F4C7362972CA880002FEEF /* NateApp */,
 				43F4C7352972CA880002FEEF /* Products */,
-				24BD37E1511E2BFE5772EDA7 /* Pods */,
-				D774F3774C7F7A3BD76F1C42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -400,14 +384,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D774F3774C7F7A3BD76F1C42 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				16F5FC16534CB4B5008A5A59 /* Pods_NateApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,11 +391,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43F4C7422972CA8A0002FEEF /* Build configuration list for PBXNativeTarget "NateApp" */;
 			buildPhases = (
-				8F8C64712952EB89435BB2E7 /* [CP] Check Pods Manifest.lock */,
 				43F4C7302972CA880002FEEF /* Sources */,
 				43F4C7312972CA880002FEEF /* Frameworks */,
 				43F4C7322972CA880002FEEF /* Resources */,
-				3763EE363F70779CD409892F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,48 +448,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3763EE363F70779CD409892F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NateApp/Pods-NateApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NateApp/Pods-NateApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NateApp/Pods-NateApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F8C64712952EB89435BB2E7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NateApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43F4C7302972CA880002FEEF /* Sources */ = {
@@ -671,7 +603,6 @@
 		};
 		43F4C7432972CA8A0002FEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 786A4F11A047352B980826DF /* Pods-NateApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -703,7 +634,6 @@
 		};
 		43F4C7442972CA8A0002FEEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02ED06BD8EC2E1A8A0602F82 /* Pods-NateApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

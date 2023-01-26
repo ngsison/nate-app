@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import StepperView
 
 struct AboutView: View {
     @Environment(\.colorScheme) private var colorScheme
