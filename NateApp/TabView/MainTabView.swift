@@ -17,7 +17,7 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house")
                 }
             
-            Text("Projects")
+            ProjectListView()
                 .tabItem {
                     Label("Projects", systemImage: "latch.2.case")
                 }

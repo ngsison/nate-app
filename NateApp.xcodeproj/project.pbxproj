@@ -14,6 +14,7 @@
 		430247B8297534F70055E4F1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430247B7297534F70055E4F1 /* Common.swift */; };
 		4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308F8792976298300E53DFB /* CustomShapesView.swift */; };
 		43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43333FAE297D7B0600AD90ED /* AppVersionView.swift */; };
+		436410E629850F8100E57AAF /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436410E529850F8100E57AAF /* ProjectListView.swift */; };
 		439E07402982F4B5001C5923 /* AboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E073F2982F4B5001C5923 /* AboutHeaderView.swift */; };
 		439E07432982F4DA001C5923 /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07422982F4DA001C5923 /* SkillsView.swift */; };
 		439E07452982F518001C5923 /* ExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07442982F518001C5923 /* ExperiencesView.swift */; };
@@ -47,6 +48,7 @@
 		4308F8792976298300E53DFB /* CustomShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesView.swift; sourceTree = "<group>"; };
 		4308F87D297724DF00E53DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43333FAE297D7B0600AD90ED /* AppVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionView.swift; sourceTree = "<group>"; };
+		436410E529850F8100E57AAF /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		439E073F2982F4B5001C5923 /* AboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderView.swift; sourceTree = "<group>"; };
 		439E07422982F4DA001C5923 /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		439E07442982F518001C5923 /* ExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,9 @@
 		43333FB4297D815100AD90ED /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				436410E529850F8100E57AAF /* ProjectListView.swift */,
+				43B36B0A2972F032002C17DA /* FeatureList */,
+				43B36B16297308DF002C17DA /* Features */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -363,14 +368,12 @@
 		43F4C7362972CA880002FEEF /* NateApp */ = {
 			isa = PBXGroup;
 			children = (
-				4308F87D297724DF00E53DFB /* Info.plist */,
 				43F4C7372972CA880002FEEF /* NateApp.swift */,
-				43B36B0A2972F032002C17DA /* FeatureList */,
-				43B36B16297308DF002C17DA /* Features */,
 				43D79823297C54AE005486BE /* TabView */,
 				4308F87529759A3A00E53DFB /* SharedViews */,
 				43B36B2F2973CB78002C17DA /* Utilities */,
 				43F4C73D2972CA8A0002FEEF /* Preview Content */,
+				4308F87D297724DF00E53DFB /* Info.plist */,
 				43F4C73B2972CA8A0002FEEF /* Assets.xcassets */,
 			);
 			path = NateApp;
@@ -460,6 +463,7 @@
 				43015437297EFA2D0080A1B5 /* ColorExtension.swift in Sources */,
 				439E07452982F518001C5923 /* ExperiencesView.swift in Sources */,
 				43333FAF297D7B0600AD90ED /* AppVersionView.swift in Sources */,
+				436410E629850F8100E57AAF /* ProjectListView.swift in Sources */,
 				43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */,
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,
 				43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */,
