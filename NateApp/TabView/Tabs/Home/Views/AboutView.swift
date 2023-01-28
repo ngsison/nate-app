@@ -9,13 +9,13 @@ import SwiftUI
 
 struct AboutView: View {
     @Environment(\.colorScheme) private var colorScheme
-    @State private var userColorScheme: ColorScheme?
+    @State private var isDarkMode = false
     
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [userColorScheme == .dark ? .black : .white,
-                                        userColorScheme == .dark ? .gray  : .white],
+                LinearGradient(colors: [colorScheme == .dark ? .black : .white,
+                                        colorScheme == .dark ? .gray  : .white],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
@@ -43,22 +43,19 @@ struct AboutView: View {
             }
             .toolbar {
                 ToolbarItem {
-                    Button {
-                        guard let oldUserColorScheme = userColorScheme else { return }
-                        if oldUserColorScheme == .dark {
-                            userColorScheme = .light
-                        } else {
-                            userColorScheme = .dark
+                    Menu {
+                        Toggle(isOn: $isDarkMode) {
+                            Label("Dark mode", systemImage: "moon")
                         }
                     } label: {
-                        Image(systemName: userColorScheme == .dark ? "sun.max" : "moon")
+                        Image(systemName: "gearshape")
                     }
                 }
             }
         }
-        .preferredColorScheme(userColorScheme ?? colorScheme)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
         .onAppear {
-            userColorScheme = colorScheme
+            isDarkMode = colorScheme == .dark
         }
     }
 }
