@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ProjectListView: View {
+    @State var featureCategories = FeatureCategory.allFeatureCategories
+    @State var navigationPath = NavigationPath()
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             List {
                 Section("apps") {
                     ProjectCell(appName: "CircleIn", appIcon: "app-icon-circlein", workDuration: "Jun 2021 - Present")
@@ -18,8 +21,12 @@ struct ProjectListView: View {
                     ProjectCell(appName: "EZman Rider", appIcon: "app-icon-ezman-rider", workDuration: "Feb 2020 - Aug 2021")
                 }
                 
-                Section("features") {
-                    Text("WIP")
+                ForEach(featureCategories, id: \.self) { featureCategory in
+                    Section(featureCategory.title.rawValue) {
+                        ForEach(featureCategory.features, id: \.title) { feature in
+                            FeatureCell(navigationPath: $navigationPath, feature: feature)
+                        }
+                    }
                 }
                 
                 Section("sample codes") {
@@ -28,6 +35,9 @@ struct ProjectListView: View {
             }
             .padding(.vertical)
             .navigationTitle("Projects")
+            .navigationDestination(for: Feature.self) { feature in
+                FeatureDetailView(feature: feature)
+            }
         }
     }
 }
@@ -57,6 +67,19 @@ fileprivate struct ProjectCell: View {
                 Text(workDuration)
                     .font(.caption)
             }
+        }
+    }
+}
+
+fileprivate struct FeatureCell: View {
+    @Binding var navigationPath: NavigationPath
+    var feature: Feature
+
+    var body: some View {
+        Button {
+            navigationPath.append(feature)
+        } label: {
+            Text(feature.title.rawValue).foregroundColor(.primary)
         }
     }
 }

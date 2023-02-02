@@ -20,7 +20,6 @@
 		439E07452982F518001C5923 /* ExperiencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07442982F518001C5923 /* ExperiencesView.swift */; };
 		439E07472982F5A2001C5923 /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07462982F5A2001C5923 /* EducationView.swift */; };
 		439E07492982F5CB001C5923 /* SpeakingEngagementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E07482982F5CB001C5923 /* SpeakingEngagementsView.swift */; };
-		43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B082972F02D002C17DA /* MainViewModel.swift */; };
 		43B36B122972F668002C17DA /* FeatureCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B112972F668002C17DA /* FeatureCategories.swift */; };
 		43B36B1929730907002C17DA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1829730907002C17DA /* GradientView.swift */; };
 		43B36B1D2973B30A002C17DA /* GradientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B36B1C2973B30A002C17DA /* GradientViewModel.swift */; };
@@ -34,7 +33,6 @@
 		43D79825297C54C2005486BE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D79824297C54C2005486BE /* MainTabView.swift */; };
 		43E60F1229787BF30069B7D6 /* GitHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E60F1129787BF30069B7D6 /* GitHubView.swift */; };
 		43F4C7382972CA880002FEEF /* NateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7372972CA880002FEEF /* NateApp.swift */; };
-		43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F4C7392972CA880002FEEF /* FeatureListView.swift */; };
 		43F4C73C2972CA8A0002FEEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73B2972CA8A0002FEEF /* Assets.xcassets */; };
 		43F4C73F2972CA8A0002FEEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -54,7 +52,6 @@
 		439E07442982F518001C5923 /* ExperiencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesView.swift; sourceTree = "<group>"; };
 		439E07462982F5A2001C5923 /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
 		439E07482982F5CB001C5923 /* SpeakingEngagementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingEngagementsView.swift; sourceTree = "<group>"; };
-		43B36B082972F02D002C17DA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		43B36B112972F668002C17DA /* FeatureCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCategories.swift; sourceTree = "<group>"; };
 		43B36B1829730907002C17DA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		43B36B1C2973B30A002C17DA /* GradientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewModel.swift; sourceTree = "<group>"; };
@@ -69,7 +66,6 @@
 		43E60F1129787BF30069B7D6 /* GitHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubView.swift; sourceTree = "<group>"; };
 		43F4C7342972CA880002FEEF /* NateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F4C7372972CA880002FEEF /* NateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NateApp.swift; sourceTree = "<group>"; };
-		43F4C7392972CA880002FEEF /* FeatureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureListView.swift; sourceTree = "<group>"; };
 		43F4C73B2972CA8A0002FEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F4C73E2972CA8A0002FEEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +127,8 @@
 		43333FB4297D815100AD90ED /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				436410E529850F8100E57AAF /* ProjectListView.swift */,
-				43B36B0A2972F032002C17DA /* FeatureList */,
-				43B36B16297308DF002C17DA /* Features */,
+				43B36B0B2972F20A002C17DA /* Models */,
+				43B36B0C2972F211002C17DA /* Views */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -172,16 +167,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		43B36B0A2972F032002C17DA /* FeatureList */ = {
-			isa = PBXGroup;
-			children = (
-				43B36B0B2972F20A002C17DA /* Models */,
-				43B36B0D2972F215002C17DA /* ViewModels */,
-				43B36B0C2972F211002C17DA /* Views */,
-			);
-			path = FeatureList;
-			sourceTree = "<group>";
-		};
 		43B36B0B2972F20A002C17DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,18 +178,11 @@
 		43B36B0C2972F211002C17DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				43F4C7392972CA880002FEEF /* FeatureListView.swift */,
+				43B36B16297308DF002C17DA /* Features */,
+				436410E529850F8100E57AAF /* ProjectListView.swift */,
 				43B36B252973C92E002C17DA /* FeatureDetailView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		43B36B0D2972F215002C17DA /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				43B36B082972F02D002C17DA /* MainViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		43B36B16297308DF002C17DA /* Features */ = {
@@ -468,7 +446,6 @@
 				43B36B322973CB98002C17DA /* DateExtension.swift in Sources */,
 				43B36B292973CA15002C17DA /* UnitPointChoice.swift in Sources */,
 				43B36B2E2973CA99002C17DA /* ChartViewModel.swift in Sources */,
-				43F4C73A2972CA880002FEEF /* FeatureListView.swift in Sources */,
 				4308F87A2976298300E53DFB /* CustomShapesView.swift in Sources */,
 				43F4C7382972CA880002FEEF /* NateApp.swift in Sources */,
 				43E60F1229787BF30069B7D6 /* GitHubView.swift in Sources */,
@@ -478,7 +455,6 @@
 				430247B629750E8D0055E4F1 /* AnimationsView.swift in Sources */,
 				43B36B262973C92E002C17DA /* FeatureDetailView.swift in Sources */,
 				439E07492982F5CB001C5923 /* SpeakingEngagementsView.swift in Sources */,
-				43B36B092972F02D002C17DA /* MainViewModel.swift in Sources */,
 				43D79822297AEBE5005486BE /* AboutView.swift in Sources */,
 				430247B02974410E0055E4F1 /* PhotoPickerView.swift in Sources */,
 				43B36B232973C879002C17DA /* MonthViews.swift in Sources */,
